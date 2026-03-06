@@ -1,0 +1,4 @@
+so i just forked the repo and made my changes, then i'm making a PR the main repo to add my changes. maybe we could do something like that? 
+and then we could do like a PR every sprint and go over it in the meeting and stuff then merge stuff and make sure all merge conflicts are
+resolved and stuff then make sure everyone has the updated stuff before we start the next sprint. idk LOL we should talk about this in the 
+meeting
