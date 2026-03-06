@@ -1,3 +1,3 @@
 # pauls-ribs-website
 
-Official website for Paul's Ribs, an up and coming Gainesville-based indie band. Hi
+Official website for Paul's Ribs, an up and coming Gainesville-based indie band.
