@@ -1,12 +1,26 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Luminari';
+  src: url('/assets/fonts/Luminari.woff2') format('woff2'),
+       url('/assets/fonts/Luminari.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Improves loading performance */
+}
+
+.fantasy-text {
+  font-family: 'Luminari', serif;
+}
+
+
 :root {
-  --bg: #ede6dc;
+  --bg: #f6f1e8;
   --paper: #f6f1e8;
   --paper-2: #efe7dc;
-  --green: #6f9579;
-  --green-dark: #587963;
-  --green-deep: #44614f;
+  --green: #65bbcd;
+  --green-dark: #65bbcd;
+  --green-deep: #65bbcd;
   --text: #1e1a17;
   --text-muted: #6f655b;
   --line: rgba(30, 26, 23, 0.14);
@@ -14,7 +28,7 @@
   --shadow: 0 10px 30px rgba(40, 32, 24, 0.08);
   --display: var(--font-display), 'Brush Script MT', cursive;
   --body: var(--font-body), 'Helvetica Neue', Arial, sans-serif;
-  --background: #ede6dc;
+  --background: #f6f1e8;
   --foreground: #1e1a17;
   --card: #f6f1e8;
   --card-foreground: #1e1a17;
@@ -65,7 +79,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--body);
+  font-family: 'Luminari', serif;
 }
 
 body,
@@ -78,7 +92,7 @@ input,
 select,
 textarea,
 label {
-  font-family: var(--body);
+  font-family: 'Luminari', serif;
 }
 
 h1,
@@ -205,6 +219,17 @@ body:has(.shows-page) .site-header {
   background:
     linear-gradient(180deg, rgba(151, 205, 170, 0.06), rgba(17, 26, 20, 0.22)),
     url('/assets/EPKHero.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  overflow: hidden;
+}
+
+.contact-hero-panel {
+  min-height: 880px;
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(151, 205, 170, 0.06), rgba(17, 26, 20, 0.22)),
+    url('/assets/ContactHero.jpg');
   background-size: cover;
   background-position: center 30%;
   overflow: hidden;

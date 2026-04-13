@@ -14,10 +14,10 @@ type NavibarProps = {
 }
 
 const links = [
-  { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/shows', label: 'Shows' },
   { href: '/epk', label: 'EPK' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export default function Navibar({

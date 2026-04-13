@@ -1,0 +1,14 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-image: url('/media/hero.webp');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
