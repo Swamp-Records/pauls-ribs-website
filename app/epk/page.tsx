@@ -64,15 +64,36 @@
 // }
 'use client'
 
-import dynamic from 'next/dynamic' // 1. Add this import
 import PageHero from '@/components/page-hero'
 import Image from 'next/image'
 
-// 2. Load InstagramEmbed dynamically and disable Server Side Rendering (ssr: false)
-const InstagramEmbed = dynamic(
-  () => import('react-social-media-embed').then((mod) => mod.InstagramEmbed),
-  { ssr: false }
-)
+function InstagramEmbed({ url }: { url: string }) {
+  const embedUrl = `${url.replace(/\/$/, '')}/embed`
+
+  return (
+    <div
+      style={{
+        width: '100%',
+        maxWidth: '540px',
+        margin: '0 auto',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        boxShadow: 'var(--shadow)',
+        background: '#fff',
+      }}
+    >
+      <iframe
+        src={embedUrl}
+        title="Instagram post"
+        width="100%"
+        height="700"
+        style={{ border: 'none', display: 'block' }}
+        loading="lazy"
+        allowTransparency={true}
+      />
+    </div>
+  )
+}
 
 export default function EpkPage() {
   return (
@@ -83,7 +104,7 @@ export default function EpkPage() {
       <section className="about-story-section">
         <div className="container" style={{ textAlign: 'center' }}>
           <div className="about-copy" style={{ margin: '0 auto' }}>
-            {/* This will use Caveat because of your CSS h1 rule */}
+            {/* This uses the global header font */}
             <h1 className="about-page-heading" style={{ fontStyle: 'italic', marginBottom: '32px' }}>
               Electronic Press Kit
             </h1>
@@ -97,6 +118,27 @@ export default function EpkPage() {
               thinking of all your desires, wants, and wishes. A glimpse into what could&apos;ve been. 
               They know how to captivate a room and bring in a crowd.
             </p>
+            <a
+              href="/assets/Paul%E2%80%99sRibsEPK.pdf"
+              download
+              style={{
+                display: 'inline-block',
+                marginTop: '28px',
+                background: 'var(--green)',
+                color: '#fff',
+                padding: '16px 40px',
+                fontSize: '1.05rem',
+                fontWeight: '700',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                border: 'none',
+                boxShadow: 'var(--shadow)',
+                transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+              }}
+            >
+              Download EPK PDF
+            </a>
           </div>
         </div>
       </section>
@@ -169,9 +211,9 @@ export default function EpkPage() {
   gridTemplateColumns: 'repeat(auto-fit, minmax(328px, 1fr))', 
   gap: '20px' 
 }}>
-  <InstagramEmbed url="https://www.instagram.com/p/DXC85uwCRUV/?img_index=1" width="100%" />
-  <InstagramEmbed url="https://www.instagram.com/p/DTv7yKujtW6/?img_index=3" width="100%" />
-  <InstagramEmbed url="https://www.instagram.com/p/DVOroBWjaPj/?img_index=1" width="100%" />
+  <InstagramEmbed url="https://www.instagram.com/p/DXC85uwCRUV/" />
+  <InstagramEmbed url="https://www.instagram.com/p/DTv7yKujtW6/" />
+  <InstagramEmbed url="https://www.instagram.com/p/DVOroBWjaPj/" />
 </div>
 
         </div>

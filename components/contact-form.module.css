@@ -24,7 +24,7 @@
   border-color: #6b9579;
   background: var(--background);
   color: var(--text);
-  font-family: 'Luminari', serif;
+  font-family: var(--body);
   font-size: 16px;
   margin: 20px;
 }
@@ -42,7 +42,7 @@
   /*#ede6dc*/
   border-width: 2px;
   cursor: pointer;
-  font-family: 'Luminari', serif;
+  font-family: var(--body);
   font-size: 16px;
   border-radius: 75px;
   margin-top: 20px;

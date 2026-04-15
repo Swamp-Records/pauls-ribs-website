@@ -15,6 +15,8 @@ export default function PageHero({
   className,
   children,
 }: PageHeroProps) {
+  const isHomePage = className.includes('home-hero-panel')
+
   return (
     <section className={className}>
       <Navibar
@@ -26,7 +28,11 @@ export default function PageHero({
         ariaLabel={ariaLabel}
       />
 
-      <Link href="/" className="home-hero-logo-wrap" aria-label="Paul's Ribs home">
+      <Link
+        href="/"
+        className={`home-hero-logo-wrap${isHomePage ? '' : ' inner-page-hero-logo-wrap'}`}
+        aria-label="Paul's Ribs home"
+      >
         <Image
           src="/assets/PaulsRibsLogo.svg"
           alt="Paul's Ribs logo"
