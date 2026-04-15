@@ -1,19 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Luminari';
-  src: url('/assets/fonts/Luminari.woff2') format('woff2'),
-       url('/assets/fonts/Luminari.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; /* Improves loading performance */
-}
-
-.fantasy-text {
-  font-family: 'Luminari', serif;
-}
-
-
 :root {
   --bg: #f6f1e8;
   --paper: #f6f1e8;
@@ -26,8 +12,8 @@
   --line: rgba(30, 26, 23, 0.14);
   --white: #ffffff;
   --shadow: 0 10px 30px rgba(40, 32, 24, 0.08);
-  --display: var(--font-display), 'Brush Script MT', cursive;
-  --body: var(--font-body), 'Helvetica Neue', Arial, sans-serif;
+  --display: 'Fondamento', serif;
+  --body: 'Gayathri', sans-serif;
   --background: #f6f1e8;
   --foreground: #1e1a17;
   --card: #f6f1e8;
@@ -79,7 +65,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Luminari', serif;
+  font-family: var(--body);
 }
 
 body,
@@ -87,12 +73,16 @@ p,
 span,
 li,
 a,
-button,
+label,
+small,
+figcaption,
+blockquote,
+td,
+th,
 input,
 select,
-textarea,
-label {
-  font-family: 'Luminari', serif;
+textarea {
+  font-family: var(--body);
 }
 
 h1,
@@ -103,6 +93,13 @@ h5,
 h6 {
   font-family: var(--display);
   font-weight: 700;
+}
+
+.about-page-heading,
+.shows-page-heading,
+.home-band-heading,
+.brand {
+  font-family: var(--display);
 }
 
 a {
@@ -119,6 +116,12 @@ button,
 input,
 textarea {
   font: inherit;
+}
+
+button,
+.show-card-ticket,
+.social-icon-label {
+  font-family: inherit;
 }
 
 main {
@@ -400,6 +403,10 @@ body:has(.shows-page) .site-header {
   letter-spacing: -0.02em;
 }
 
+.home-site-nav-links {
+  font-family: var(--body);
+}
+
 .navibar-links a {
   transition: opacity 160ms ease;
 }
@@ -526,11 +533,17 @@ body:has(.shows-page) .site-header {
 }
 
 .home-hero-logo-wrap {
+  display: block;
   position: absolute;
   top: -82px;
   left: 44px;
   z-index: 2;
   width: min(420px, 50vw);
+}
+
+.inner-page-hero-logo-wrap {
+  top: -6px;
+  width: min(260px, 31vw);
 }
 
 .home-hero-logo {
@@ -768,9 +781,15 @@ body:has(.shows-page) .site-header {
   }
 
   .home-hero-logo-wrap {
+    display: block;
     top: -52px;
     left: 24px;
     width: min(280px, 62vw);
+  }
+
+  .inner-page-hero-logo-wrap {
+    top: 0;
+    width: min(180px, 39vw);
   }
 
   .home-hero-spotify {

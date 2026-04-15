@@ -1,14 +1,14 @@
 'use client'
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import PageHero from '@/components/page-hero'
 import styles from '@/components/contact-form.module.css'
 
 export default function ContactForm() {
   const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
     formData.append("access_key", "141b8400-0354-4935-a806-dfe43856f13e");
 
     const response = await fetch("https://api.web3forms.com/submit", {

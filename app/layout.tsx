@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
-import { Caveat, Inter } from 'next/font/google'
+import { Fondamento, Gayathri } from 'next/font/google'
 
 import './globals.css'
 
-const caveat = Caveat({
+const fondamento = Fondamento({
   subsets: ['latin'],
-  weight: ['700'],
-  variable: '--font-display',
+  weight: ['400'],
+  variable: '--site-font-display',
 })
 
-const inter = Inter({
+const gayathri = Gayathri({
   subsets: ['latin'],
-  variable: '--font-body',
+  weight: ['100', '400', '700'],
+  variable: '--site-font-body',
 })
 
 export const metadata: Metadata = {
@@ -26,7 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${caveat.variable} ${inter.variable}`}>{children}</body>
+      <body
+        className={`${fondamento.className} ${gayathri.className} ${fondamento.variable} ${gayathri.variable}`}
+      >
+        {children}
+      </body>
     </html>
   )
 }
