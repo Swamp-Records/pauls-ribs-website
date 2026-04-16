@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Luminari';
-  src: url('/assets/fonts/Luminari.woff2') format('woff2'),
-       url('/assets/fonts/Luminari.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --bg: #f6f1e8;
   --paper: #f6f1e8;
@@ -20,8 +12,8 @@
   --line: rgba(30, 26, 23, 0.14);
   --white: #ffffff;
   --shadow: 0 10px 30px rgba(40, 32, 24, 0.08);
-  --display: 'Luminari', serif;
-  --body: 'Luminari', sans-serif;
+  --display: var(--font-display);
+  --body: var(--font-body);
   --background: #f6f1e8;
   --foreground: #1e1a17;
   --card: #f6f1e8;

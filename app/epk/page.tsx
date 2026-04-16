@@ -89,7 +89,6 @@ function InstagramEmbed({ url }: { url: string }) {
         height="700"
         style={{ border: 'none', display: 'block' }}
         loading="lazy"
-        allowTransparency={true}
       />
     </div>
   )
