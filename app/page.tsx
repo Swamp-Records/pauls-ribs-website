@@ -26,14 +26,6 @@ export default function Home() {
       <section className="home-story-grid">
         <div className="home-story-copy">
           <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
           <h1 className="home-band-heading">Paul&apos;s Ribs</h1>
           <p>
             <br></br>
