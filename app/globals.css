@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Luminari';
+  src: url('/assets/fonts/Luminari.woff2') format('woff2'),
+       url('/assets/fonts/Luminari.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bg: #f6f1e8;
   --paper: #f6f1e8;
@@ -12,8 +20,8 @@
   --line: rgba(30, 26, 23, 0.14);
   --white: #ffffff;
   --shadow: 0 10px 30px rgba(40, 32, 24, 0.08);
-  --display: 'Fondamento', serif;
-  --body: 'Gayathri', sans-serif;
+  --display: 'Luminari', serif;
+  --body: 'Luminari', sans-serif;
   --background: #f6f1e8;
   --foreground: #1e1a17;
   --card: #f6f1e8;
@@ -185,7 +193,7 @@ body:has(.shows-page) .site-header {
 }
 
 .about-hero-panel {
-  min-height: 820px;
+  height: 880px;
   position: relative;
   background:
     linear-gradient(180deg, rgba(151, 205, 170, 0.06), rgba(17, 26, 20, 0.22)),
@@ -229,7 +237,8 @@ body:has(.shows-page) .site-header {
 
 .contact-hero-panel {
   min-height: 880px;
-  position: relative;
+  width: auto;
+
   background:
     linear-gradient(180deg, rgba(151, 205, 170, 0.06), rgba(17, 26, 20, 0.22)),
     url('/assets/ContactHero.jpg');
