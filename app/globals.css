@@ -332,7 +332,7 @@ body:has(.shows-page) .site-header {
 
 .show-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(170px, 0.9fr) auto;
+  grid-template-columns: 1fr 1fr auto;
   align-items: center;
   gap: 18px;
   padding: 12px 16px 12px 18px;
