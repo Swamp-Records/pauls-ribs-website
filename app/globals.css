@@ -593,7 +593,7 @@ body:has(.shows-page) .site-header {
   max-width: none;
   color: #4e433d;
   line-height: 1.45;
-  font-size: 1.3625rem;
+  font-size: 1.53rem;
 }
 
 .home-story-image {
@@ -805,7 +805,7 @@ body:has(.shows-page) .site-header {
   }
 
   .home-story-copy p {
-    font-size: 1.3625rem;
+    font-size: 1.53rem;
   }
 
   .about-story-section {
